@@ -52,8 +52,8 @@ max_wzglednie_pierwsza = zadanie3_najwieksza_wzglednie_pierwsza(liczby)
 
 # Zapisanie wyników do pliku
 with open('wyniki.txt', 'w') as file:
-    file.write(f"Zadanie 1:\nLiczba liczb mniejszych niż 1000: {liczba_mniejszych}\nOstatnie dwie liczby mniejsze niż 1000: {ostatnie_dwie[0]}, {ostatnie_dwie[1]}\n\n")
+    file.write(f"Zadanie 1:\nLiczba liczb mniejszych niz 1000: {liczba_mniejszych}\nOstatnie dwie liczby mniejsze niz 1000: {ostatnie_dwie[0]}, {ostatnie_dwie[1]}\n\n")
     file.write("Zadanie 2:\n")
     for wynik in wyniki_z2:
         file.write(f"Liczba: {wynik[0]}, Dzielniki: {wynik[1]}\n")
-    file.write(f"\nZadanie 3:\nNajwiększa liczba względnie pierwsza ze wszystkimi pozostałymi: {max_wzglednie_pierwsza}")
+    file.write(f"\nZadanie 3:\nNajwieksza liczba wzglednie pierwsza ze wszystkimi pozostalymi: {max_wzglednie_pierwsza}")
