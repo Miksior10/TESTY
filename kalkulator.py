@@ -30,5 +30,4 @@ def kalkulator():
     else:
         print("Nieprawidłowy wybór. Spróbuj ponownie.")
 
-# Uruchomienie kalkulatora
 kalkulator()
