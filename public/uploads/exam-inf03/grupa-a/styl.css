@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    font-family: Garamond, serif;
+}
+
+body {
+    margin: 0;
+    background-color: #fffaf5;
+}
+.content-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.primary-area {
+    width: 80%;
+}
+
+header {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 80%;
+    height: 680px;
+    padding: 20px;
+}
+
+footer {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.chat-window {
+    border: 1px solid tomato;
+    margin: 15px;
+    height: 470px;
+    overflow-y: scroll;
+    padding: 15px;
+    background-color: white;
+}
+
+.message {
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2% 0;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.message-jolanta {
+    background-color: white;
+}
+
+.message-jolanta img {
+    float: left;
+    margin-right: 10px;
+}
+
+.message-krzysztof {
+    background-color: #CCC;
+    text-align: right;
+    margin-left: 10px;
+}
+.message-krzysztof img {
+    float: right;
+    margin-left: 10px;
+}
+button {
+    background-color: tomato;
+    border: 1px solid darkred;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#message-input {
+    width: 500%;
+    padding: 5px;
+}
+

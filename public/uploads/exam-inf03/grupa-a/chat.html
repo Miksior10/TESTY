@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section class="content-layout">
+        <section class="primary-area">
+            <header>
+                <h2>Chat</h2>
+            </header>
+            <main>
+                <section id="chat-window" class="chat-window" aria-live="polite">
+                    <article class="message message-jolanta">
+                        <img src="Jolka.jpg" alt="Jolanta Nowak">
+                        <p>Cześć idziesz jutro do kina?</p>
+                    </article>
+                    <article class="message message-krzysztof">
+                        <p>Tak! A ty?</p>
+                        <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+                    </article>
+                </section>
+                <form id="message-form">
+                    <label for="message-input">Wpisz wiadomość:</label>
+                    <input type="text" id="message-input" name="message" autocomplete="off">
+                    <button type="submit">Wyślij</button>
+                </form>
+                <button type="button" id="random-response">Generuj losową odpowiedź</button>
+            </main>
+        </section>
+        <aside>
+            <h3>Chaty</h3>
+            <ul>
+                <li>Ogólny</li>
+                <li>Tematyczne
+                    <ol>
+                        <li>Turystyczny</li>
+                        <li>Żeglarski</li>
+                        <li>Filatelistyczny</li>
+                        <li>Hodowla zwierzątek domowych</li>
+                    </ol>
+                </li>
+            </ul>
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>Krzysztof Łukasiński</p>
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+        </aside>
+    </section>
+    <footer>
+        <h5>Chat wykonał: 0000000000</h5>
+    </footer>
+    <script src="skrypt.js"></script>
+</body>
+</html>
