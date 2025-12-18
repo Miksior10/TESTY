@@ -1,0 +1,89 @@
+* {
+    text-align: center;
+    font-family: Georgia, serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    background-color: Tomato;
+    color: MistyRose;
+    padding: 10px;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+.blok-nav {
+    background-color: #FFAEA5;
+    height: 170px;
+    font-size: 200%;
+    line-height: 170px;
+    cursor: pointer;
+}
+
+#blok1 {
+    background-color: MistyRose;
+}
+
+main {
+    float: left;
+    width: 80%;
+    background-color: MistyRose;
+    height: 510px;
+    overflow: auto;
+}
+
+section {
+    padding: 20px 0;
+}
+
+#sekcja2,
+#sekcja3 {
+    display: none;
+}
+
+table {
+    margin: 0 auto;
+    width: 60%;
+    border: 1px dashed Indigo;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+select,
+button {
+    margin: 20px;
+}
+
+dl {
+    width: 80%;
+    margin: 0 auto;
+}
+
+dt {
+    font-weight: bold;
+    font-style: italic;
+}
+
+dt:hover {
+    font-size: 180%;
+}
+
+img {
+    margin: 10px;
+    max-width: 30%;
+}
+
+.ukryj-napis {
+    position: absolute;
+    left: -9999px;
+}
