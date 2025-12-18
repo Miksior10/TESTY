@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside class="bok">
+        <img src="obraz.jpg" alt="notatki">
+    </aside>
+
+    <div class="prawa-strona">
+        <header>
+            <h2>Moje zadania</h2>
+        </header>
+
+        <nav>
+            <input type="text" id="nowe-zadanie" placeholder="Dodaj zadanie...">
+            <button id="dodaj-btn">Dodaj</button>
+        </nav>
+
+        <main>
+            <ul id="lista-zadan">
+                <li>
+                    <span>Wyprowadzić psa</span>
+                    <button class="wykonane-btn">Wykonane</button>
+                </li>
+                <li>
+                    <span>Gimnastyka</span>
+                    <button class="wykonane-btn">Wykonane</button>
+                </li>
+                <li>
+                    <span>Zakupy</span>
+                    <button class="wykonane-btn">Wykonane</button>
+                </li>
+                <li>
+                    <span>Spacer z kumplem</span>
+                    <button class="wykonane-btn">Wykonane</button>
+                </li>
+                <li>
+                    <span>Odrabianie lekcji z młodszą siostrą</span>
+                    <button class="wykonane-btn">Wykonane</button>
+                </li>
+                <li>
+                    <span>Projekt na geografię</span>
+                    <button class="wykonane-btn">Wykonane</button>
+                </li>
+            </ul>
+        </main>
+
+        <footer>
+            <h3>Notatki: 00000000000</h3>
+        </footer>
+    </div>
+
+    <script>
+        function oznaczWykonane(event) {
+            const button = event.target;
+            const li = button.closest('li');
+            const span = li.querySelector('span');
+            if (span) {
+                span.style.textDecoration = 'line-through';
+            }
+        }
+
+        function dodajZadanie() {
+            const input = document.getElementById('nowe-zadanie');
+            const tekst = input.value.trim();
+            if (tekst === '') {
+                return;
+            }
+
+            const lista = document.getElementById('lista-zadan');
+            const li = document.createElement('li');
+
+            const span = document.createElement('span');
+            span.textContent = tekst;
+
+            const btn = document.createElement('button');
+            btn.textContent = 'Wykonane';
+            btn.className = 'wykonane-btn';
+            btn.addEventListener('click', oznaczWykonane);
+
+            li.appendChild(span);
+            li.appendChild(btn);
+            lista.appendChild(li);
+
+            input.value = '';
+        }
+
+        document.querySelectorAll('.wykonane-btn').forEach(function (btn) {
+            btn.addEventListener('click', oznaczWykonane);
+        });
+
+        document.getElementById('dodaj-btn').addEventListener('click', dodajZadanie);
+    </script>
+</body>
+</html>
