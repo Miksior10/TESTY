@@ -1,0 +1,104 @@
+/* Domyślne style dla wszystkich selektorów */
+* {
+    font-family: 'Comic Sans MS', sans-serif;
+    text-align: center;
+}
+
+/* Blok nawigacyjny i stopka */
+nav, footer {
+    background-color: #00838F;
+    color: #B2DFDB;
+    padding: 10px;
+}
+
+/* Blok główny - flexbox dla układu obok siebie */
+main {
+    display: flex;
+}
+
+/* Wspólne dla bloku bocznego i sekcji */
+aside, section {
+    width: 50%;
+    height: 600px;
+    overflow: auto;
+}
+
+/* Dodatkowo dla bloku bocznego */
+aside {
+    background-color: #B2DFDB;
+}
+
+/* Klasa wycieczka */
+.wycieczka {
+    background-color: rgba(0, 131, 143, 0.7);
+    height: 150px;
+    margin: 10px 100px;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+}
+
+.wycieczka:hover {
+    background-color: rgba(0, 131, 143, 1);
+}
+
+.wycieczka h2,
+.wycieczka p {
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Selektor obrazu */
+img {
+    float: right;
+    border-radius: 30px;
+    margin: 7px;
+}
+
+/* Selektor elementu listy */
+li {
+    display: inline-block;
+    list-style: none;
+}
+
+/* Selektor odnośnika */
+a {
+    color: #B2DFDB;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Style formularza */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form select,
+form input[type="number"],
+form input[type="date"] {
+    padding: 5px;
+    margin: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
