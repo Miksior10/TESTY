@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaż polskich znaków</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+    
+    <nav>
+        <a href="index.html">Strona Głowna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+        <label for="szerokość">Szerokość pomieszczenie [m]: </label> <input type="number" name="szerokosc" id="szerokosc">
+        <label for="dlugosc">Długość pomieszczenie [m]: </label> <input type="number" name="dlugosc" id="dlugosc">
+        <p>Typ panelu</p>
+        <input type="radio" name="typ_panelu" id="laminowane" value="laminowane"> <label for="laminowane">Panele laminowane</label><br>
+        <input type="radio" name="typ_panelu" id="winylowe" value="winylowe"> <label for="winylowe">Panel winylowe</label><br>
+        <input type="radio" name="typ_panelu" id="deska" value="deska"> <label for="deska">Deska podłogowa</label><br>
+        <button onclick="Oblicz()">Oblicz</button>
+        <p id="wynik"></p>
+        <script>
+            function Oblicz() {
+                const szerokosc = parseFloat(document.getElementById('szerokosc').value);
+                const dlugosc = parseFloat(document.getElementById('dlugosc').value);
+                const typPanelu = document.querySelector('input[name="typ_panelu"]:checked');
+                const wynik = document.getElementById('wynik');
+
+                if (!szerokosc || !dlugosc || !typPanelu || szerokosc <= 0 || dlugosc <= 0) {
+                    wynik.textContent = "Wprowadż poprawne dane."
+                    return;
+                }
+
+                const pole = szerokosc * dlugosc;
+
+                let kosztZaM2 = 0;
+                if (typPanelu.value === "laminowane") kosztZaM2 = 12;
+                else if (typPanelu.value === "winylowe") kosztZaM2 = 14;
+                else if (typPanelu.value === "deska") kosztZaM2 = 18;
+
+                const koszt = pole * kosztZaM2
+                
+                wynik.textContent = `Pole powierzchni pomieszczenia: ${pole} m2, koszt montażu ${koszt} zł`;
+            }
+        </script>
+    </main>
+
+    <footer>
+        <h5>Autor Strony: Ja</h5>
+    </footer>
+</body>
+</html>
